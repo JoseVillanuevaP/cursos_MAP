@@ -12,11 +12,8 @@ use Illuminate\Database\Eloquent\Model;
  * @property string|null $title
  * @property string|null $biography
  * @property string|null $website_url
- * @property \Illuminate\Support\Carbon|null $created_at
- * @property \Illuminate\Support\Carbon|null $updated_at
- * @method static \Illuminate\Database\Eloquent\Builder|\App\Teacher newModelQuery()
- * @method static \Illuminate\Database\Eloquent\Builder|\App\Teacher newQuery()
- * @method static \Illuminate\Database\Eloquent\Builder|\App\Teacher query()
+ * @property \Carbon\Carbon|null $created_at
+ * @property \Carbon\Carbon|null $updated_at
  * @method static \Illuminate\Database\Eloquent\Builder|\App\Teacher whereBiography($value)
  * @method static \Illuminate\Database\Eloquent\Builder|\App\Teacher whereCreatedAt($value)
  * @method static \Illuminate\Database\Eloquent\Builder|\App\Teacher whereId($value)
@@ -25,8 +22,18 @@ use Illuminate\Database\Eloquent\Model;
  * @method static \Illuminate\Database\Eloquent\Builder|\App\Teacher whereUserId($value)
  * @method static \Illuminate\Database\Eloquent\Builder|\App\Teacher whereWebsiteUrl($value)
  * @mixin \Eloquent
+ * @property-read \Illuminate\Database\Eloquent\Collection|\App\Course[] $courses
+ * @property-read \App\User $user
  */
 class Teacher extends Model
 {
-    //
+    protected $fillable = ['user_id'];
+
+    public function courses () {
+        return $this->hasMany(Course::class);
+    }
+
+    public function user () {
+        return $this->belongsTo(User::class);
+    }
 }
