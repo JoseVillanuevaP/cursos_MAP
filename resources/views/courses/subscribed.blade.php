@@ -1,10 +1,9 @@
 @extends('layouts.app')
+
 @section('jumbotron')
-    @include('partials.jumbotron',[
-        "title"=> __("Plataforma de Asesorías de Matemáticas  CEM"),
-        "icon"=>"th"
-    ])
+    @include('partials.jumbotron', ['title' => 'Cursos a los que estás suscrito', 'icon' => 'table'])
 @endsection
+
 @section('content')
     <div class="pl-5 pr-5">
         <div class="row justify-content-center">
@@ -13,15 +12,8 @@
                     @include('partials.courses.card_course')
                 </div>
             @empty
-                <div class="alert alert-dark">
-                    {{ __("No hay ningún curso disponible") }}
-                </div>
+                <div class="alert alert-dark">{{ __("Todavía no estás suscrito a ningún curso") }}</div>
             @endforelse
         </div>
-
-        <div class="row justify-content-center">
-            {{ $courses->links() }}
-        </div>
-
     </div>
 @endsection

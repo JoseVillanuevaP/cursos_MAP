@@ -1,4 +1,4 @@
-@import url(https://fonts.googleapis.com/css?family=Hind+Vadodara);@charset "UTF-8";
+@import url(//fonts.googleapis.com/css?family=Hind+Vadodara);@charset "UTF-8";
 
 .card {
   box-shadow: 2px 2px 20px rgba(0, 0, 0, 0.3);
@@ -10939,7 +10939,7 @@ main {
 }
 
 header .navbar-laravel {
-  background-color: #078dc0;
+  background-color: rgba(33, 51, 198, 0.81);
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.04);
 }
 
@@ -10980,7 +10980,7 @@ header .navbar-laravel .navbar-brand {
 
 .btn-course,
 .btn-course:hover {
-  background-color: #078dc0;
+  background-color: rgba(33, 51, 198, 0.81);
   color: #fff;
 }
 
@@ -10997,30 +10997,30 @@ header .navbar-laravel .navbar-brand {
 }
 
 .badge-box > i {
-  background-color: #078dc0 !important;
+  background-color: rgba(33, 51, 198, 0.81) !important;
 }
 
 .page-item.active .page-link {
   z-index: 1;
   color: #fff;
-  background-color: #078dc0;
+  background-color: rgba(33, 51, 198, 0.81);
   border-color: #1b1e21;
 }
 
 .page-link,
 .page-link:hover {
-  color: #078dc0;
+  color: rgba(33, 51, 198, 0.81);
 }
 
 .btn-subscribe,
 .btn-subscribe:hover {
-  background-color: #078dc0 !important;
+  background-color: rgba(33, 51, 198, 0.81) !important;
   color: #fff;
   font-size: 24px !important;
 }
 
 .bg-light {
-  border: 1px solid #078dc0;
+  border: 1px solid rgba(33, 51, 198, 0.81);
   text-align: center;
 }
 
