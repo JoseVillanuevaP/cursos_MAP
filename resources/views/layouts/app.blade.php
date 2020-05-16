@@ -18,6 +18,7 @@
 
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+    @stack('styles')
 </head>
 <body>
 
@@ -25,10 +26,14 @@
     @yield('jumbotron')
     <div id="app">
 
+        <stripe-form></stripe-form>
+
 
         <main class="py-4">
             @yield('content')
         </main>
     </div>
+    <script src="{{asset('js/app.js')}}"></script>
+    @stack('scripts')
 </body>
 </html>
